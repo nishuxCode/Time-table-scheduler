@@ -124,3 +124,4 @@ Using Genetics Algorithm, a number of trade-off solutions, in terms of multiple 
 
 
 <i>PS: Project Report(in pdf) is available in root folder as AutomatedTimeTableScheduler.pdf</i>
+"# AI-Timetable" 
