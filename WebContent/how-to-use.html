@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>How to Use | Time Table Generator</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="{{ url_for('static', filename='css/agency.min.css') }}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" style="background-color: black">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Time Table Generator</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="/">Home</a></li>
+                    <li><a class="page-scroll" href="/how-to-use">How to Use?</a></li>
+                    <li><a class="page-scroll" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" style="margin-top: 100px; margin-bottom: 50px;">
+        <div align="center">
+            <h1><b>AUTOMATED TIME-TABLE SCHEDULER</b><br> (Using Genetic Algorithms)</h1>
+            <img alt="preview" src="/readme-images/image.png" width="65%" class="img-responsive">
+        </div>
+
+        <h2>Introduction</h2>
+        <p>Time Table Scheduling is an NP-hard problem and hence polynomial time verifiable using genetic algorithms. It a typical scheduling problem that appears to be a tedious job in every academic institute once or twice a year. In earlier days, time
+            table scheduling was done manually with a single person or some group involved in task of scheduling it manually, which takes a lot of effort and time. Planning timetables is one of the most complex and error-prone applications.</p>
+        <p>Timetabling is the task of creating a timetable while satisfying some constraints. There are basically two types of constraints, soft constraints and hard constraints. Soft constraints are those if we violate them in scheduling, the output is
+            still valid, but hard constraints are those which if we violate them; the timetable is no longer valid. The search space of a timetabling problem is too vast, many solutions exist in the search space and few of them are not feasible. Feasible
+            solutions here mean those which do not violate hard constraints and as well try to satisfy soft constraints. We need to choose the most appropriate one from feasible solutions. Most appropriate ones here mean those which do not violate soft
+            constraints to a greater extent. In this project hard-constraints have been taken care of strictly and it has been ensured that soft-constraints are as well followed as much as possible.</p>
+
+        <p><strong>Soft-constraints (flexible):</strong></p>
+        <ul>
+            <li>More or less equal load is given to all faculties</li>
+            <li>Required time (hours per week) is given to every Batch</li>
+        </ul>
+
+        <p><strong>Hard-constraints (rigid):</strong></p>
+        <ul>
+            <li>There should not be any single instance of a faculty taking two classes simultaneously</li>
+            <li>A class group must not have more than one lectures at the same time</li>
+        </ul>
+
+        <h2>Getting Started</h2>
+        <p>Instructions to use this project :</p>
+        <p>This project is configured in eclipse and is a simple implementation</p>
+        <ul>
+            <li>Clone this repository.</li>
+            <li>Import the project in Eclipse ( you can even copy the package into a new project if you use a different IDE / If import of Eclipse project doesnt work well with that IDE )</li>
+            <li>Import users.sql file in your database</li>
+            <li>Set your database credendtials in line no 10-11 in UserDao.java
+                <pre><code>Class.forName("com.mysql.jdbc.Driver");
+con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "", "");</code></pre>
+            </li>
+            <li>Put the input.txt file anywhere in the drive and give its location in inputdata.java at line no 33
+                <pre><code>File file = new File("c:\\test\\input.txt");</code></pre>
+            </li>
+        </ul>
+        <p>Cheers !</p>
+        <p>PS : Contributing back to this project will be appreciated.</p>
+
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>Java 8</li>
+            <li>Eclipse(compatible with Enterprise Edition)</li>
+            <li>Tomcat (or any other) Local Server</li>
+            <li>MySql Database</li>
+        </ul>
+
+        <h2>Running the tests</h2>
+        <p>Click 'Get Started with us today' on homepage</p>
+        <p>Login (username: pranav password: khurana)</p>
+        <p>Click on 'Test with custom input'</p>
+
+        <h2>Test Run</h2>
+        <h3>Input</h3>
+        <p>Input form is made using Ajax and displays as many fields as the no specified.</p>
+        <img src="/readme-images/input1.png" alt="input1" class="img-responsive"><br>
+        <img src="/readme-images/input2.png" alt="input2" class="img-responsive">
+
+        <h3>Output</h3>
+        <img src="/readme-images/output1.png" alt="out1" class="img-responsive"><br>
+        <img src="/readme-images/output2.png" alt="out2" class="img-responsive">
+
+        <h3>Console</h3>
+        <p>For the ease of testing and tracking, a lot of information is printed on the console itself. It involves input information, slots generated, few chromosomes from each generation of chromosome, fitness of these chromosomes, maximum fitness in a
+            generation and final selected chromosome.</p>
+        <img src="/readme-images/console.png" alt="console" class="img-responsive">
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- Theme JavaScript -->
+    <script src="{{ url_for('static', filename='js/agency.min.js') }}"></script>
+</body>
+
+</html>
